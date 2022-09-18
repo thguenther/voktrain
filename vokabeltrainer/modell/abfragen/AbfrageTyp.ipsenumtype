@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EnumType xmlns="http://www.faktorzehn.org" abstract="false" enumContentName="abfragen.AbfrageTyp" extensible="false" since="0.0.1" superEnumType="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.faktorzehn.org https://doc.faktorzehn.org/schema/faktor-ips/21.12/EnumType.xsd" xml:space="preserve">
+ <Description id="4b11ef0c-5ffe-4116-a09a-6dbc8c25483c" locale="de"/>
+ <EnumValue>
+  <Description id="3e9d4af9-b98a-4f1e-83e0-b867afc4adc5" locale="de"/>
+  <EnumAttributeValue isNull="false">1</EnumAttributeValue>
+  <EnumAttributeValue isNull="false">Lernen</EnumAttributeValue>
+  <EnumLiteralNameAttributeValue isNull="false">LERNEN</EnumLiteralNameAttributeValue>
+  <EnumAttributeValue isNull="false">3</EnumAttributeValue>
+ </EnumValue>
+ <EnumValue>
+  <Description id="396b0860-d109-48f6-9c98-738924d08901" locale="de"/>
+  <EnumAttributeValue isNull="false">2</EnumAttributeValue>
+  <EnumAttributeValue isNull="false">Wiederholen</EnumAttributeValue>
+  <EnumLiteralNameAttributeValue isNull="false">WIEDERHOLEN</EnumLiteralNameAttributeValue>
+  <EnumAttributeValue isNull="false">1</EnumAttributeValue>
+ </EnumValue>
+ <EnumAttribute datatype="Integer" id="ae452b25-e6f4-4f8e-925d-3a91558ef591" identifier="true" inherited="false" multilingual="false" name="id" since="0.0.1" unique="true" usedAsNameInFaktorIpsUi="false">
+  <Label id="47588c82-f75c-4353-836b-428b0e78acbb" locale="de" pluralValue="" value=""/>
+  <Description id="589bd5a9-c312-4fa4-85ef-63e8be590d62" locale="de"/>
+ </EnumAttribute>
+ <EnumAttribute datatype="String" id="bf543267-4ff1-467e-a187-a5e4ce51ae0c" identifier="false" inherited="false" multilingual="false" name="name" since="0.0.1" unique="true" usedAsNameInFaktorIpsUi="true">
+  <Label id="c83a4ed8-c6d0-4255-b567-5660a2366a4b" locale="de" pluralValue="" value=""/>
+  <Description id="3ed2d2ab-ac9c-43dc-8d48-5da5ffae9d1c" locale="de"/>
+ </EnumAttribute>
+ <EnumLiteralNameAttribute datatype="String" defaultValueProviderAttribute="name" id="17d0f127-f47f-4f6e-ac0b-5e312809b272" identifier="false" inherited="false" multilingual="false" name="LITERAL_NAME" since="0.0.1" unique="true" usedAsNameInFaktorIpsUi="false">
+  <Label id="c34129fd-be6e-4038-ade7-ffc9b1331df7" locale="de" pluralValue="" value=""/>
+  <Description id="1ee34f01-fbca-488e-b986-c78dc164ecd4" locale="de"/>
+ </EnumLiteralNameAttribute>
+ <EnumAttribute datatype="Integer" id="37a54194-7127-4ae0-8698-ed48617fe1d3" identifier="false" inherited="false" multilingual="false" name="benoetigteKorrekteEingaben" since="0.0.1" unique="false" usedAsNameInFaktorIpsUi="false">
+  <Label id="42c3e014-6c0c-46c8-b1d2-d0bdedf2c97d" locale="de" pluralValue="" value=""/>
+  <Description id="cf91e909-35f3-413c-9f59-b7d76b360110" locale="de"/>
+ </EnumAttribute>
+</EnumType>

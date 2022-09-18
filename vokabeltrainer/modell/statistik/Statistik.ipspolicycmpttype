@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PolicyCmptType xmlns="http://www.faktorzehn.org" abstract="false" configurableByProductCmptType="false" forceExtensionCompilationUnitGeneration="false" generateValidatorClass="false" productCmptType="" since="0.0.1" supertype="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.faktorzehn.org https://doc.faktorzehn.org/schema/faktor-ips/21.12/PolicyCmptType.xsd" xml:space="preserve">
+ <Label id="c3639984-4543-4de9-ace6-bc8390aab178" locale="de" pluralValue="" value=""/>
+ <Description id="7952d84f-71fb-4c42-a1b6-d316db497078" locale="de"/>
+ <Association associationType="reverseComp" category="" configurable="true" constrain="false" derivedUnion="false" id="8d9701be-c094-4d1c-bddc-9076ded022f2" inverseAssociation="Statistik" matchingAssociationName="" matchingAssociationSource="" maxCardinality="1" minCardinality="0" modifier="published" qualified="false" sharedAssociation="false" since="0.0.1" subsettedDerivedUnion="" target="vokabeln.Vokabel" targetRolePlural="" targetRoleSingular="Vokabel">
+  <Label id="9c7fe257-0c47-41fc-a735-1b48b5c5dc43" locale="de" pluralValue="" value=""/>
+  <Description id="dadb12d0-d035-4ec4-b2ce-0e710ac74954" locale="de"/>
+  <PersistenceAssociation cascadeTypeMerge="false" cascadeTypeOverwriteDefault="false" cascadeTypePersist="false" cascadeTypeRefresh="false" cascadeTypeRemove="false" fetchType="EAGER" id="e1ac74c1-16b9-4c2d-b7a3-36eede025f98" indexName="" joinColumnName="VOKABEL" joinColumnNullable="true" joinTableName="" orphanRemoval="false" ownerOfManyToManyAssociation="false" sourceColumnName="" targetColumnName="" transient="false"/>
+ </Association>
+ <Attribute attributeType="changeable" category="" changingOverTime="true" computationMethodSignature="" datatype="LocalDateTime" id="6b3cf658-4b42-4678-bcf5-fe6da847fa80" modifier="published" name="zeitstempel" overwrite="false" relevanceConfiguredByProduct="false" since="0.0.1" valueSetConfiguredByProduct="false">
+  <DefaultValue isNull="true"/>
+  <Label id="931c51e2-687e-4f05-87be-23e999fb7ee3" locale="de" pluralValue="" value=""/>
+  <Description id="047fa1ac-d5ce-49f8-9735-b38cd77ec693" locale="de"/>
+  <ValueSet abstract="false" id="e7ddf1ad-1dae-4221-9ea2-4755d6b8ac8d">
+   <AllValues containsNull="true"/>
+  </ValueSet>
+  <PersistenceAttribute converterQualifiedClassName="" id="41eff495-2c8c-455c-bafc-024be96f80d3" indexName="" sqlColumnDefinition="" tableColumnName="ZEITSTEMPEL" tableColumnNullable="true" tableColumnPrecision="16" tableColumnScale="2" tableColumnSize="255" tableColumnUnique="false" temporalMapping="DATE_ONLY" transient="false"/>
+ </Attribute>
+ <Attribute attributeType="changeable" category="" changingOverTime="true" computationMethodSignature="" datatype="Integer" id="7e413b85-952a-4778-804f-a2c6347576c9" modifier="published" name="uebereinstimmung" overwrite="false" relevanceConfiguredByProduct="false" since="0.0.1" valueSetConfiguredByProduct="false">
+  <DefaultValue isNull="true"/>
+  <Label id="a24483ae-17bc-4405-bc35-f9ab2d19de01" locale="de" pluralValue="" value=""/>
+  <Description id="bd213940-0278-4f25-a6a6-a292508a856b" locale="de"/>
+  <ValueSet abstract="false" id="dbcfd1c5-73f3-48d2-ba27-adddab6218aa">
+   <AllValues containsNull="true"/>
+  </ValueSet>
+  <PersistenceAttribute converterQualifiedClassName="" id="72e251ce-abb6-4fab-a781-97a6d2a47993" indexName="" sqlColumnDefinition="" tableColumnName="UEBEREINSTIMMUNG" tableColumnNullable="true" tableColumnPrecision="16" tableColumnScale="2" tableColumnSize="255" tableColumnUnique="false" temporalMapping="DATE_ONLY" transient="false"/>
+ </Attribute>
+ <Attribute attributeType="changeable" category="" changingOverTime="true" computationMethodSignature="" datatype="Long" id="7710be53-1692-4267-8e8c-cc59e66f5e96" modifier="published" name="abfrageId" overwrite="false" relevanceConfiguredByProduct="false" since="0.0.1" valueSetConfiguredByProduct="false">
+  <DefaultValue isNull="true"/>
+  <Label id="69871278-7953-4e82-9598-066f3a09f9b0" locale="de" pluralValue="" value=""/>
+  <Description id="e9f1c4b2-5cc0-47fd-96c5-499570b033ff" locale="de">ID der Abfrage, durch welche diese Statistik erzeugt wurde.</Description>
+  <ValueSet abstract="false" id="8254d534-2b12-4721-8285-17a46f57302d">
+   <AllValues containsNull="true"/>
+  </ValueSet>
+  <PersistenceAttribute converterQualifiedClassName="" id="b3019738-3d69-43e0-b6f2-17b4bccc61ae" indexName="" sqlColumnDefinition="" tableColumnName="ABFRAGE_ID" tableColumnNullable="true" tableColumnPrecision="16" tableColumnScale="2" tableColumnSize="255" tableColumnUnique="false" temporalMapping="DATE_ONLY" transient="false"/>
+ </Attribute>
+ <Persistence definesDiscriminatorColumn="false" discriminatorColumnName="" discriminatorDatatype="STRING" discriminatorValue="" id="cab29ce7-6d85-4197-b6f0-d6c87c61adf0" inheritanceStrategy="SINGLE_TABLE" persistentType="ENTITY" tableName="STATISTIK" useTableDefinedInSupertype="false">
+  <Description id="6e633da9-d2dd-404e-bbca-e7f1a5ad6bcc" locale="de"/>
+ </Persistence>
+</PolicyCmptType>

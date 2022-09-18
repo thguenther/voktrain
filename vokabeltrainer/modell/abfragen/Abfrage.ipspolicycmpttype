@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PolicyCmptType xmlns="http://www.faktorzehn.org" abstract="false" configurableByProductCmptType="false" forceExtensionCompilationUnitGeneration="false" generateValidatorClass="false" productCmptType="" since="0.0.1" supertype="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.faktorzehn.org https://doc.faktorzehn.org/schema/faktor-ips/21.12/PolicyCmptType.xsd" xml:space="preserve">
+ <Label id="55021d47-8d88-4188-b3ac-11a913fdbdd5" locale="de" pluralValue="" value=""/>
+ <Description id="a12868dd-bc7d-43aa-9369-f4fde51e35b5" locale="de"/>
+ <Association associationType="reverseComp" category="" configurable="true" constrain="false" derivedUnion="false" id="52702216-de22-4810-93c2-6b6436d8e8ce" inverseAssociation="Abfrage" matchingAssociationName="" matchingAssociationSource="" maxCardinality="1" minCardinality="0" modifier="published" qualified="false" sharedAssociation="false" since="0.0.1" subsettedDerivedUnion="" target="vokabeln.Gruppe" targetRolePlural="" targetRoleSingular="Gruppe">
+  <Label id="45030505-0f16-40a7-b8a1-0b49b2480417" locale="de" pluralValue="" value=""/>
+  <Description id="6895ec6e-9829-4052-ad3b-a008a64fe69f" locale="de"/>
+  <PersistenceAssociation cascadeTypeMerge="false" cascadeTypeOverwriteDefault="false" cascadeTypePersist="false" cascadeTypeRefresh="false" cascadeTypeRemove="false" fetchType="EAGER" id="a740f7b6-5589-44c4-b748-3496a3495ebe" indexName="" joinColumnName="GRUPPE" joinColumnNullable="true" joinTableName="" orphanRemoval="false" ownerOfManyToManyAssociation="false" sourceColumnName="" targetColumnName="" transient="false"/>
+ </Association>
+ <Attribute attributeType="changeable" category="" changingOverTime="true" computationMethodSignature="" datatype="String" id="f4a9b36d-266a-4d38-91f6-2513a89e8b2d" modifier="published" name="name" overwrite="false" relevanceConfiguredByProduct="false" since="0.0.1" valueSetConfiguredByProduct="false">
+  <DefaultValue isNull="true"/>
+  <Label id="a7596d33-b28d-40d6-9f7c-f1cb1bcec31c" locale="de" pluralValue="" value=""/>
+  <Description id="4a60358f-50f4-4de7-9390-5840712a5130" locale="de"/>
+  <ValueSet abstract="false" id="526ed8a1-fd43-4154-808c-f3e999d2eb74">
+   <StringLength containsNull="false">
+    <MaximumLength>255</MaximumLength>
+   </StringLength>
+  </ValueSet>
+  <PersistenceAttribute converterQualifiedClassName="" id="5a6344bb-351d-4e97-9451-5ea1ac0223fb" indexName="" sqlColumnDefinition="" tableColumnName="NAME" tableColumnNullable="true" tableColumnPrecision="16" tableColumnScale="2" tableColumnSize="255" tableColumnUnique="false" temporalMapping="DATE_ONLY" transient="false"/>
+ </Attribute>
+ <Attribute attributeType="changeable" category="" changingOverTime="true" computationMethodSignature="" datatype="abfragen.AbfrageTyp" id="998b810c-a95b-4fce-bf2b-8013c188422a" modifier="published" name="art" overwrite="false" relevanceConfiguredByProduct="false" since="0.0.1" valueSetConfiguredByProduct="false">
+  <DefaultValue isNull="true"/>
+  <Label id="cc6999ef-c383-4e0d-9800-bd7216269f08" locale="de" pluralValue="" value=""/>
+  <Description id="ec868ae8-f0e8-47af-b4dc-093e95cb4477" locale="de"/>
+  <ValueSet abstract="false" id="16b939a5-466d-438f-86b6-d433d1e0a75e">
+   <AllValues containsNull="false"/>
+  </ValueSet>
+  <PersistenceAttribute converterQualifiedClassName="" id="3744430e-e6f4-4528-b32c-f91035950be5" indexName="" sqlColumnDefinition="" tableColumnName="ART" tableColumnNullable="true" tableColumnPrecision="16" tableColumnScale="2" tableColumnSize="255" tableColumnUnique="false" temporalMapping="DATE_ONLY" transient="false"/>
+ </Attribute>
+ <ValidationRuleDef activatedByDefault="true" appliedForAllBusinessFunctions="true" category="" changingOverTime="false" checkValueAgainstValueSetRule="true" configurableByProductComponent="false" id="b8f09a9a-05cd-4eec-9601-12f17f6b2423" messageCode="ART_UNGUELTIG" messageSeverity="error" modifier="published" name="pruefeArt" since="0.0.1" validatedAttrSpecifiedInSrc="false">
+  <ValidatedAttribute name="art"/>
+  <MessageText>
+   <InternationalString>
+    <LocalizedString locale="de" text="Der Typ der Abfrage muss festgelegt werden."/>
+   </InternationalString>
+  </MessageText>
+  <Label id="9a0472d9-aee9-4482-8852-0fc9485abe74" locale="de" pluralValue="" value=""/>
+  <Description id="ef9bffdc-3a35-4363-87fd-a109adb4e2b8" locale="de"/>
+ </ValidationRuleDef>
+ <Persistence definesDiscriminatorColumn="false" discriminatorColumnName="" discriminatorDatatype="STRING" discriminatorValue="" id="7aa02e1a-0630-44fb-bb92-9bcd0e6f4ecb" inheritanceStrategy="SINGLE_TABLE" persistentType="ENTITY" tableName="ABFRAGE" useTableDefinedInSupertype="false">
+  <Description id="f7facd50-a521-4f81-a375-3e57872dc13a" locale="de"/>
+ </Persistence>
+</PolicyCmptType>

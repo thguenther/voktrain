@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<FaktorIps-TableOfContents productDataVersion="1.1.0" xmlversion="3.0">
+ <PolicyCmptType implementationClass="de.ts.ns.tg.vokabeltrainer.abfragen.Abfrage" ipsObjectId="abfragen.Abfrage" ipsObjectQualifiedName="abfragen.Abfrage"/>
+ <EnumContent implementationClass="de.ts.ns.tg.vokabeltrainer.abfragen.AbfrageTyp" ipsObjectId="modell.abfragen.AbfrageTyp" ipsObjectQualifiedName="abfragen.AbfrageTyp.Type"/>
+ <PolicyCmptType implementationClass="de.ts.ns.tg.vokabeltrainer.statistik.Statistik" ipsObjectId="statistik.Statistik" ipsObjectQualifiedName="statistik.Statistik"/>
+ <PolicyCmptType implementationClass="de.ts.ns.tg.vokabeltrainer.vokabeln.Gruppe" ipsObjectId="vokabeln.Gruppe" ipsObjectQualifiedName="vokabeln.Gruppe"/>
+ <PolicyCmptType implementationClass="de.ts.ns.tg.vokabeltrainer.vokabeln.Vokabel" ipsObjectId="vokabeln.Vokabel" ipsObjectQualifiedName="vokabeln.Vokabel"/>
+</FaktorIps-TableOfContents>

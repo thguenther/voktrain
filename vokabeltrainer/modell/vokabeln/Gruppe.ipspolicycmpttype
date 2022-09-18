@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PolicyCmptType xmlns="http://www.faktorzehn.org" abstract="false" configurableByProductCmptType="false" forceExtensionCompilationUnitGeneration="false" generateValidatorClass="false" productCmptType="" since="0.0.1" supertype="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.faktorzehn.org https://doc.faktorzehn.org/schema/faktor-ips/21.12/PolicyCmptType.xsd" xml:space="preserve">
+ <Label id="a47b9aee-15c3-4971-ba5e-935742fcecac" locale="de" pluralValue="" value=""/>
+ <Description id="1f4b0bf3-0b4c-4498-8285-3baa552151ed" locale="de"/>
+ <Association associationType="comp" category="" configurable="true" constrain="false" derivedUnion="false" id="426362ed-6134-4591-8f91-ae0031d1a00d" inverseAssociation="Gruppe" matchingAssociationName="" matchingAssociationSource="" maxCardinality="*" minCardinality="0" modifier="published" qualified="false" sharedAssociation="false" since="0.0.1" subsettedDerivedUnion="" target="vokabeln.Vokabel" targetRolePlural="Vokabeln" targetRoleSingular="Vokabel">
+  <Label id="1968e547-af28-4af1-9b22-d4dd44fbc571" locale="de" pluralValue="" value=""/>
+  <Description id="8130e0ed-4058-4cb7-b8eb-e133a0829451" locale="de"/>
+  <PersistenceAssociation cascadeTypeMerge="true" cascadeTypeOverwriteDefault="false" cascadeTypePersist="true" cascadeTypeRefresh="true" cascadeTypeRemove="true" fetchType="EAGER" id="387f27f4-c91c-4756-a5e8-665e8b9ca320" indexName="" joinColumnName="" joinColumnNullable="true" joinTableName="" orphanRemoval="true" ownerOfManyToManyAssociation="false" sourceColumnName="" targetColumnName="" transient="false"/>
+ </Association>
+ <Association associationType="comp" category="" configurable="true" constrain="false" derivedUnion="false" id="b6bdc4d4-4130-4755-8b0e-27d19d365774" inverseAssociation="Gruppe" matchingAssociationName="" matchingAssociationSource="" maxCardinality="*" minCardinality="0" modifier="published" qualified="false" sharedAssociation="false" since="0.0.1" subsettedDerivedUnion="" target="abfragen.Abfrage" targetRolePlural="Abfragen" targetRoleSingular="Abfrage">
+  <Label id="0e0d5ba8-a1fe-4def-83e1-a5dce2c2c2db" locale="de" pluralValue="" value=""/>
+  <Description id="d8db5c37-f293-4e77-9731-4bf9f3fb9f92" locale="de"/>
+  <PersistenceAssociation cascadeTypeMerge="true" cascadeTypeOverwriteDefault="false" cascadeTypePersist="true" cascadeTypeRefresh="true" cascadeTypeRemove="true" fetchType="EAGER" id="494c4ba0-d1ec-45f1-9194-7027f4fbf272" indexName="" joinColumnName="" joinColumnNullable="true" joinTableName="" orphanRemoval="true" ownerOfManyToManyAssociation="false" sourceColumnName="" targetColumnName="" transient="false"/>
+ </Association>
+ <Attribute attributeType="changeable" category="" changingOverTime="true" computationMethodSignature="" datatype="String" id="8f856f77-963a-4440-a6ab-2e0ce9678926" modifier="published" name="name" overwrite="false" relevanceConfiguredByProduct="false" since="0.0.1" valueSetConfiguredByProduct="false">
+  <DefaultValue isNull="true"/>
+  <Label id="2f290afb-90b0-41f5-958b-96c2a9f29fa7" locale="de" pluralValue="" value=""/>
+  <Description id="df032d8c-c1fe-4b2a-a7ff-9a424a09fde2" locale="de"/>
+  <ValueSet abstract="false" id="ae8b5653-8338-4617-a3e4-79ca85dc2689">
+   <StringLength containsNull="false">
+    <MaximumLength>255</MaximumLength>
+   </StringLength>
+  </ValueSet>
+  <PersistenceAttribute converterQualifiedClassName="" id="a1439dd0-068e-4f25-85f3-341dc1dd248b" indexName="" sqlColumnDefinition="" tableColumnName="NAME" tableColumnNullable="true" tableColumnPrecision="16" tableColumnScale="2" tableColumnSize="255" tableColumnUnique="false" temporalMapping="DATE_ONLY" transient="false"/>
+ </Attribute>
+ <Attribute attributeType="derived" category="" changingOverTime="true" computationMethodSignature="" datatype="String" id="d2e65099-fcfa-47df-b4ce-23978c955358" modifier="published" name="statusBeschreibung" overwrite="false" relevanceConfiguredByProduct="false" since="0.0.1" valueSetConfiguredByProduct="false">
+  <DefaultValue isNull="true"/>
+  <Label id="033bba9c-3943-453e-95ff-77467eb77f35" locale="de" pluralValue="" value=""/>
+  <Description id="ea4e770a-11de-4ff0-8799-63475708b602" locale="de"/>
+  <ValueSet abstract="false" id="943d5d1a-5ca0-44f5-8324-bc5e08ed2235">
+   <AllValues containsNull="true"/>
+  </ValueSet>
+  <PersistenceAttribute converterQualifiedClassName="" id="30a8ca0e-5039-4b6e-970e-2eb9bb1ace87" indexName="" sqlColumnDefinition="" tableColumnName="" tableColumnNullable="true" tableColumnPrecision="16" tableColumnScale="2" tableColumnSize="255" tableColumnUnique="false" temporalMapping="DATE_ONLY" transient="false"/>
+ </Attribute>
+ <ValidationRuleDef activatedByDefault="true" appliedForAllBusinessFunctions="true" category="" changingOverTime="false" checkValueAgainstValueSetRule="true" configurableByProductComponent="false" id="c3a2de71-a57b-4ee2-a542-9d1fb82280a9" messageCode="NAME_UNGUELTIG" messageSeverity="error" modifier="published" name="pruefeName" since="0.0.1" validatedAttrSpecifiedInSrc="false">
+  <ValidatedAttribute name="name"/>
+  <MessageText>
+   <InternationalString>
+    <LocalizedString locale="de" text="Es muss ein Name für die Gruppe angegeben werden."/>
+   </InternationalString>
+  </MessageText>
+  <Label id="da988356-6e3f-4b78-ab76-b68a539acf3f" locale="de" pluralValue="" value=""/>
+  <Description id="7a64a209-f290-4007-9408-fe9814e6d2a5" locale="de"/>
+ </ValidationRuleDef>
+ <Persistence definesDiscriminatorColumn="false" discriminatorColumnName="" discriminatorDatatype="STRING" discriminatorValue="" id="6e5892ee-65d5-494b-99f9-e9be162085e1" inheritanceStrategy="SINGLE_TABLE" persistentType="ENTITY" tableName="GRUPPE" useTableDefinedInSupertype="false">
+  <Description id="3521e369-0b30-44fb-8c3a-e36de691115b" locale="de"/>
+ </Persistence>
+</PolicyCmptType>

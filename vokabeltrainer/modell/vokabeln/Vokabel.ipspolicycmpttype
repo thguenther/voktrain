@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PolicyCmptType xmlns="http://www.faktorzehn.org" abstract="false" configurableByProductCmptType="false" forceExtensionCompilationUnitGeneration="false" generateValidatorClass="false" productCmptType="" since="0.0.1" supertype="" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.faktorzehn.org https://doc.faktorzehn.org/schema/faktor-ips/21.12/PolicyCmptType.xsd" xml:space="preserve">
+ <Label id="954d6d1c-3d59-434d-98ee-55277e64b01b" locale="de" pluralValue="" value=""/>
+ <Description id="b3092b72-778f-42a8-a61c-dceab4a600ec" locale="de"/>
+ <Association associationType="reverseComp" category="" configurable="true" constrain="false" derivedUnion="false" id="4ae65fb8-10b2-4857-9b0c-5c06468eef6f" inverseAssociation="Vokabel" matchingAssociationName="" matchingAssociationSource="" maxCardinality="1" minCardinality="0" modifier="published" qualified="false" sharedAssociation="false" since="0.0.1" subsettedDerivedUnion="" target="vokabeln.Gruppe" targetRolePlural="" targetRoleSingular="Gruppe">
+  <Label id="80fbd7e1-4ed5-42c4-9c61-7e3dce9734d3" locale="de" pluralValue="" value=""/>
+  <Description id="4856c483-6a5f-473d-8244-48c440d7fd27" locale="de"/>
+  <PersistenceAssociation cascadeTypeMerge="false" cascadeTypeOverwriteDefault="false" cascadeTypePersist="false" cascadeTypeRefresh="false" cascadeTypeRemove="false" fetchType="EAGER" id="e77f3906-d55c-4835-a6be-a7e26fe2bdf8" indexName="" joinColumnName="GRUPPE" joinColumnNullable="true" joinTableName="" orphanRemoval="false" ownerOfManyToManyAssociation="false" sourceColumnName="" targetColumnName="" transient="false"/>
+ </Association>
+ <Association associationType="comp" category="" configurable="true" constrain="false" derivedUnion="false" id="dc3eb990-489f-4929-92ae-839353f3b0fd" inverseAssociation="Vokabel" matchingAssociationName="" matchingAssociationSource="" maxCardinality="*" minCardinality="0" modifier="published" qualified="false" sharedAssociation="false" since="0.0.1" subsettedDerivedUnion="" target="statistik.Statistik" targetRolePlural="Statistiken" targetRoleSingular="Statistik">
+  <Label id="732221df-70c7-47fd-bda7-fc6b88bec0ba" locale="de" pluralValue="" value=""/>
+  <Description id="33c4e17d-9597-4e54-bb1f-307bd587582b" locale="de"/>
+  <PersistenceAssociation cascadeTypeMerge="true" cascadeTypeOverwriteDefault="false" cascadeTypePersist="true" cascadeTypeRefresh="true" cascadeTypeRemove="true" fetchType="EAGER" id="b6228b51-e1e8-40ba-981d-5127a5b5689c" indexName="" joinColumnName="" joinColumnNullable="true" joinTableName="" orphanRemoval="true" ownerOfManyToManyAssociation="false" sourceColumnName="" targetColumnName="" transient="false"/>
+ </Association>
+ <Attribute attributeType="changeable" category="" changingOverTime="true" computationMethodSignature="" datatype="String" id="6282ca2b-331e-4e4b-aef9-4db389bbf3ac" modifier="published" name="ausgangswert" overwrite="false" relevanceConfiguredByProduct="false" since="0.0.1" valueSetConfiguredByProduct="false">
+  <DefaultValue isNull="true"/>
+  <Label id="0a2d1a52-888e-4525-abde-7fed85654810" locale="de" pluralValue="" value=""/>
+  <Description id="0a099689-8e97-4989-bcd9-8e89baa4be99" locale="de"/>
+  <ValueSet abstract="false" id="dab3e9f5-eda3-47e0-ae59-853e1a2b8d39">
+   <StringLength containsNull="false">
+    <MaximumLength>255</MaximumLength>
+   </StringLength>
+  </ValueSet>
+  <PersistenceAttribute converterQualifiedClassName="" id="14a7dd52-5810-4b9d-8e22-e1902e856d8c" indexName="" sqlColumnDefinition="" tableColumnName="AUSGANGSWERT" tableColumnNullable="true" tableColumnPrecision="16" tableColumnScale="2" tableColumnSize="255" tableColumnUnique="false" temporalMapping="DATE_ONLY" transient="false"/>
+ </Attribute>
+ <Attribute attributeType="changeable" category="" changingOverTime="true" computationMethodSignature="" datatype="String" id="c7615b00-15b8-45ba-aefd-3283f06c38e7" modifier="published" name="zielwert" overwrite="false" relevanceConfiguredByProduct="false" since="0.0.1" valueSetConfiguredByProduct="false">
+  <DefaultValue isNull="true"/>
+  <Label id="1d4e9663-e954-423f-8400-a51b4754f64a" locale="de" pluralValue="" value=""/>
+  <Description id="b7dc6692-71b1-4714-ad42-5930ccfc5337" locale="de"/>
+  <ValueSet abstract="false" id="e3d9c4ab-f246-407d-b9d7-703ac6ca3000">
+   <StringLength containsNull="false">
+    <MaximumLength>255</MaximumLength>
+   </StringLength>
+  </ValueSet>
+  <PersistenceAttribute converterQualifiedClassName="" id="504a7637-1f76-4b46-9f28-c3bb90abe0f0" indexName="" sqlColumnDefinition="" tableColumnName="ZIELWERT" tableColumnNullable="true" tableColumnPrecision="16" tableColumnScale="2" tableColumnSize="255" tableColumnUnique="false" temporalMapping="DATE_ONLY" transient="false"/>
+ </Attribute>
+ <Attribute attributeType="derived" category="" changingOverTime="true" computationMethodSignature="" datatype="Integer" id="83088adf-854a-450a-ab04-1bb6c8643255" modifier="published" name="abgeschlosseneAbfragen" overwrite="false" relevanceConfiguredByProduct="false" since="0.0.1" valueSetConfiguredByProduct="false">
+  <DefaultValue isNull="true"/>
+  <Label id="5669c4a9-49e6-441d-9ad1-78f49310b9ca" locale="de" pluralValue="" value=""/>
+  <Description id="72eac0f3-faa3-4e36-bd09-44a9a9b86420" locale="de"/>
+  <ValueSet abstract="false" id="80f29f4b-1038-4aed-88b1-023db8e5a0e8">
+   <AllValues containsNull="true"/>
+  </ValueSet>
+  <PersistenceAttribute converterQualifiedClassName="" id="c654f6d0-aac0-46af-bc93-d5248ab975ff" indexName="" sqlColumnDefinition="" tableColumnName="" tableColumnNullable="true" tableColumnPrecision="16" tableColumnScale="2" tableColumnSize="255" tableColumnUnique="false" temporalMapping="DATE_ONLY" transient="false"/>
+ </Attribute>
+ <Attribute attributeType="derived" category="" changingOverTime="true" computationMethodSignature="" datatype="Integer" id="e9084239-0f0c-4890-8772-0aab2d402aa2" modifier="published" name="offeneAbfragen" overwrite="false" relevanceConfiguredByProduct="false" since="0.0.1" valueSetConfiguredByProduct="false">
+  <DefaultValue isNull="true"/>
+  <Label id="ef7c2cae-ba99-4cb7-8562-fc503430a17b" locale="de" pluralValue="" value=""/>
+  <Description id="ce6efe3c-c8bd-4af1-be56-d1befdc7e4e2" locale="de"/>
+  <ValueSet abstract="false" id="3ea84217-192b-4726-8157-775f50838991">
+   <AllValues containsNull="true"/>
+  </ValueSet>
+  <PersistenceAttribute converterQualifiedClassName="" id="f65cc7e6-4a13-4d8e-b733-d748ef12139f" indexName="" sqlColumnDefinition="" tableColumnName="" tableColumnNullable="true" tableColumnPrecision="16" tableColumnScale="2" tableColumnSize="255" tableColumnUnique="false" temporalMapping="DATE_ONLY" transient="false"/>
+ </Attribute>
+ <ValidationRuleDef activatedByDefault="true" appliedForAllBusinessFunctions="true" category="" changingOverTime="false" checkValueAgainstValueSetRule="true" configurableByProductComponent="false" id="3d3882d4-b376-4116-8d27-32ea2199ead6" messageCode="AUSGANGSWERT_UNGUELTIG" messageSeverity="error" modifier="published" name="pruefeAusgangswert" since="0.0.1" validatedAttrSpecifiedInSrc="false">
+  <ValidatedAttribute name="ausgangswert"/>
+  <MessageText>
+   <InternationalString>
+    <LocalizedString locale="de" text="Der Ausgangswert einer Vokabel muss angegeben werden."/>
+   </InternationalString>
+  </MessageText>
+  <Label id="54f750f4-bd75-43e5-b2be-6f8f9acc8aaf" locale="de" pluralValue="" value=""/>
+  <Description id="4b9ae41a-9b94-4d89-8c77-359f54ba4503" locale="de"/>
+ </ValidationRuleDef>
+ <ValidationRuleDef activatedByDefault="true" appliedForAllBusinessFunctions="true" category="" changingOverTime="false" checkValueAgainstValueSetRule="true" configurableByProductComponent="false" id="fac387a7-6690-405d-b6d0-b0a4eff393f2" messageCode="ZIELWERT_UNGUELTIG" messageSeverity="error" modifier="published" name="pruefeZielwert" since="0.0.1" validatedAttrSpecifiedInSrc="false">
+  <ValidatedAttribute name="zielwert"/>
+  <MessageText>
+   <InternationalString>
+    <LocalizedString locale="de" text="Der Zielwerteiner Vokabel muss angegeben werden."/>
+   </InternationalString>
+  </MessageText>
+  <Label id="c7ae25a1-a906-4a74-b487-67586d95fbde" locale="de" pluralValue="" value=""/>
+  <Description id="df48f3dd-cf19-44b8-b49c-10809946d8ec" locale="de"/>
+ </ValidationRuleDef>
+ <Persistence definesDiscriminatorColumn="false" discriminatorColumnName="" discriminatorDatatype="STRING" discriminatorValue="" id="dbfc580e-748e-4260-be9f-1ec2dd622f22" inheritanceStrategy="SINGLE_TABLE" persistentType="ENTITY" tableName="VOKABEL" useTableDefinedInSupertype="false">
+  <Description id="440af9b2-26fa-4ba7-9ab3-6cbc05cc2d93" locale="de"/>
+ </Persistence>
+</PolicyCmptType>
